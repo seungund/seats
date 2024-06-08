@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.seating-area {
+    flex: 2;
+}
+
+.seating-chart {
+    display: grid;
+    grid-template-columns: repeat(10, 80px);
+    gap: 15px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.seat {
+    width: 60px;
+    height: 60px;
+    background-image: url('seat.png');
+    background-size: cover;
+    border: 1px solid #999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 18px;
+    color: #FFC0CB;
+}
+
+.seat.selected {
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.seat.reserved {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.selected-seats {
+    margin: 20px;
+}
+
+.selected-seats ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.selected-seats ul li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #6c6;
+    color: white;
+    border-radius: 5px;
+}
+
+.reservation-form {
+    margin: 20px;
+}
+
+.reservation-form input,
+.reservation-form select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reservation-form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #6c6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservation-form button:hover {
+    background-color: #5a5;
+}
+
+.reservation-history {
+    flex: 1;
+    margin: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.reservation-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reservation-history ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #c6c6c6;
+    border-radius: 5px;
+    text-align: left;
+}
